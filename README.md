@@ -15,4 +15,5 @@ Please install Python 3.6 and Django 2.1 before running the app
 6. Go to the shown ip address
 
 *Note-* If you want to add posts you have to create a super user using following command in mysite directory
+
 python manage.py createsuperuser
