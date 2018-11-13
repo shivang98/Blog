@@ -9,7 +9,10 @@ Anybody can comment on the blog but superuser have to approve the comment.
 Please install Python 3.6 and Django 2.1 before running the app
 1. Clone the repositorie using git clone https://github.com/shivang98/Blog
 2. cd into mysite folder
-3. run python manage.py makemigrations
-4. run python manage.py migrate
-5. run run python manage.py runserver
+3. python manage.py makemigrations
+4. python manage.py migrate
+5. python manage.py runserver
 6. Go to the shown ip address
+
+*Note-* If you want to add posts you have to create a super user using following command in mysite directory
+python manage.py createsuperuser
