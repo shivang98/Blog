@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from django.generic.views import (TemplateView, ListView, DetailView, CreateView, DeleteView, UpdateView)
+from django.views.generic import (TemplateView, ListView, DetailView, CreateView, DeleteView, UpdateView)
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.utils import timezone
@@ -43,7 +43,7 @@ class PostDeleteView(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('post_list')
 
 
-class DraftListView(LoginRequiredMixin, DetailView):
+class DraftListView(LoginRequiredMixin, ListView):
     login_url = '/login/'
     redirect_field_name = 'blog/post_list.html'
     model = Post
@@ -59,7 +59,6 @@ def post_publish(request, pk):
     return redirect('post_detail', pk=pk)
 
 
-@login_required
 def add_comment_to_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == 'POST':
