@@ -1,5 +1,5 @@
 # Blog
-A company blog clone developed using Python and Django
+A Personal/Company blog clone developed using Python and Django
 Only superuser can create and edit blog posts.
 Anybody can comment on the blog but superuser have to approve the comment.
 
